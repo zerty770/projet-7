@@ -24,10 +24,13 @@ const postRoutes = require("./routes/post")
 const utilisateurRoutes = require("./routes/utilisateur")
 
 /*** Mise en place du routage */
+app.get('/', (req, res) => res.send ('bonjour'))
+
 app.use("/images", express.static(path.join(__dirname, "images")))
 
-app.use("/api/auth", utilisateurRoutes)
-app.use("/api/sauces", postRoutes)
+app.use("/auth/utilisateurs", utilisateurRoutes)
+app.use("/auth/posts", postRoutes)
+app.use("/login", utilisateurRoutes)
 
 
 /*** Start serveur */

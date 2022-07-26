@@ -1,4 +1,4 @@
-utilisateur<template>
+<template>
     <div>        
         <h1>Création d'un utilisateur</h1>
         <p v-if="errors.length">

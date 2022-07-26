@@ -5,7 +5,7 @@ import router from '@/router'
 import store from '@/store'
 
 const Axios = axios.create({
-    baseURL: 'http://localhost:8888'
+    baseURL: 'http://localhost:3000'
 })
 
 /**

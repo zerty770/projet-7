@@ -3,7 +3,7 @@ import Axios from './caller.service'
 import store from '../store'
 
 let login = (credentials) => {
-    return Axios.post('/auth/login', credentials)
+    return Axios.post('/login', credentials)
 }
 
 let logout = () => {
@@ -14,8 +14,8 @@ let getToken = () => {
     return localStorage.getItem('token')
 }
 
-let signup = (user) => {
-    return Axios.put('/auth/signup', user)
+let signup = (utilisateur) => {
+    return Axios.put('/login', utilisateur)
 }
 
 let saveToken = (token) => {

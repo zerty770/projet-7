@@ -3,23 +3,23 @@ import Axios from './caller.service'
 
 
 let getAllUtilisateurs = () => {
-    return Axios.get('/utilisateurs')
+    return Axios.get('/auth/utilisateurs')
 }
 
 let getUtilisateur = (uid) => {
-    return Axios.get('/utilisateurs/'+uid)
+    return Axios.get('/auth/utilisateurs/'+uid)
 }
 
 let updateUtilisateur = (utilisateur) => {
-    return Axios.patch('/utilisateurs/'+utilisateur.id, utilisateur)
+    return Axios.patch('/auth/utilisateurs/'+utilisateur.id, utilisateur)
 }
 
 let createUtilisateur = (utilisateur) => {
-    return Axios.put('/utilisateurs', utilisateur)
+    return Axios.put('/auth/utilisateurs', utilisateur)
 }
 
 let deleteUtilisateur = (uid) => {
-    return Axios.delete('/utilisateurs/'+uid)
+    return Axios.delete('/auth/utilisateurs/'+uid)
 }
 
 export const utilisateurService = {

@@ -3,23 +3,23 @@ import Axios from './caller.service'
 
 
 let getAllPosts = () => {
-    return Axios.get('/posts')
+    return Axios.get('/auth/posts')
 }
 
 let getPost = (cid) => {
-    return Axios.get('/posts/'+cid)
+    return Axios.get('/auth/posts/'+cid)
 }
 
 let updatePost = (post) => {
-    return Axios.patch('/posts/'+post.id, post)
+    return Axios.patch('/auth/posts/'+post.id, post)
 }
 
 let createPost = (post) => {
-    return Axios.put('/posts', post)
+    return Axios.put('/auth/posts', post)
 }
 
 let deletePost = (cid) => {
-    return Axios.delete('/posts/'+cid)
+    return Axios.delete('/auth/posts/'+cid)
 }
 
 export const postService = {

@@ -40,10 +40,10 @@ export default {
     },
     methods: {
         // Envoi à l'API pour modification
-        edit(){
-            utilisateurService.updateUtilisateur(this.utilisateur)
-                .then(res => this.$router.push({name: 'uList'}))
-                .catch(err => console.log(err))
+    edit(){
+        utilisateurService.updateUtilisateur(this.utilisateur)
+            .then(res => this.$router.push({name: 'uList'}))
+            .catch(err => console.log(err))
         }
     },
     mounted(){
